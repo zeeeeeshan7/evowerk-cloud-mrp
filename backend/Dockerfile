@@ -1,7 +1,7 @@
 # uv only exists at build time (bind-mounted below), never in the runtime image.
-FROM ghcr.io/astral-sh/uv:0.13.1 AS uv
+FROM ghcr.io/astral-sh/uv:0.13.4 AS uv
 
-FROM python:3.14-slim
+FROM python:3.15-slim
 
 WORKDIR /app
 
