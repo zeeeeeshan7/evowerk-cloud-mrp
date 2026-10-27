@@ -7,19 +7,19 @@ name = "evowerk-cloud-mrp-backend"
 version = "0.2.0"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.111.0",
+    "fastapi>=0.162.0",
     "uvicorn[standard]>=0.54.0",
     "pydantic[email]>=2.14.1",
-    "pydantic-settings>=2.2.0",
+    "pydantic-settings>=2.16.1",
     "sqlalchemy>=2.0.29",
     "asyncpg>=0.29.0",
-    "alembic>=1.13.1",
+    "alembic>=1.20.1",
     "apscheduler>=3.10.4",
     "passlib[argon2]>=1.7.4",
     "pyjwt>=2.13.0",
     "fastapi-users[sqlalchemy]>=15.0.5,<16.0.0",
     "httpx-oauth>=0.15.0,<1.0.0",
-    "boto3>=1.34.0",
+    "boto3>=1.43.118",
     "pyotp>=2.9.0",
     "cryptography>=42.0.0",
     "redis>=5.0.0",
@@ -31,13 +31,13 @@ dependencies = [
     "pytest>=8.1.1",
     "pytest-asyncio>=0.23.6",
     "aiosqlite>=0.20.0",
-    "ruff>=0.4.0",
+    "ruff>=0.17.2",
     "scipy>=1.11.0",
     "lifelines>=0.28.0",  # Weibull survival analysis for CBM RUL (backend/app/services/rul.py)
 
     # Analytics (dataset layer + engines ported from the desktop app, ad-hoc query/BI)
     "duckdb>=1.0.0",
-    "pandas>=3.0.6",
+    "pandas>=3.1.0",
     "openpyxl>=3.1.0",
     "python-multipart>=0.0.31",
 
@@ -51,10 +51,10 @@ dependencies = [
     "xgboost>=2.0.0",
     "lightgbm>=4.0.0",
     "optuna>=3.6.0",
-    "shap>=0.45.0",
+    "shap>=0.54.1",
 
     # Report exports. PDF only - the HTML and CSV renderers are stdlib.
-    "reportlab>=4.0.0",
+    "reportlab>=5.1.0",
 
     # QR code image for the operator identity-capture check-in page - pure
     # Python, the bundled SVG factory needs no Pillow.
@@ -64,7 +64,7 @@ dependencies = [
     # narration) ported from the desktop app. Each caller degrades to a
     # deterministic fallback when GEMINI_API_KEY is unset, so this is a soft
     # dependency at runtime even though it's a hard install dependency.
-    "google-genai>=1.0.0",
+    "google-genai>=2.33.0",
 
     # Data integration connectors (app/services/connectors), ported from the desktop
     # app. Each connector degrades gracefully (clear "pip install X" error) if its
