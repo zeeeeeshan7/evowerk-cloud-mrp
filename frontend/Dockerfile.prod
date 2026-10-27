@@ -18,7 +18,7 @@ RUN npm ci
 COPY frontend/ frontend/
 RUN npm --workspace frontend run build
 
-FROM nginx:1.29-alpine
+FROM nginx:1.31-alpine
 
 # Same rationale as the build stage above: the upstream tag's Alpine package
 # snapshot lags behind Alpine's own index (openssl/libxml2/libpng/libexpat).

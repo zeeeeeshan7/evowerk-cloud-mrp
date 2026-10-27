@@ -3,7 +3,7 @@
 #   docker compose -f docker-compose.test.yml run --rm --build test
 # No Postgres or Redis needed: the backend suite runs on in-memory SQLite and
 # fakeredis (backend/tests/conftest.py). Build context is the repo root.
-FROM ghcr.io/astral-sh/uv:0.13.1 AS uv
+FROM ghcr.io/astral-sh/uv:0.13.6 AS uv
 
 # Node 24 LTS (same as CI) for the frontend; uv fetches Python 3.12 (same as CI)
 # for the backend, so one image holds both toolchains.
